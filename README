@@ -1,0 +1,43 @@
+idan0610, orlykor12
+Idan Refaeli (305681132), Orly Koren (203595541)
+EX: 2
+
+FILES:
+README -- This file
+uthreads.cpp -- Library functions for threads
+Makefile
+
+REMARKS:
+None
+
+ANSWERS:
+
+Q1:
+if the Google's Chrome browser creates new kernel level thread instead of new 
+process for each tab it would not have the same benefit. 
+the is reason is that the proccesses are isolated from each other, and that way
+are more protected from each other - they do not share addres space and do not
+communicate - if one tab crushes then it doesnt affect the other tabs.
+on the other hand, creating, terminating and switching proccesses is 
+much more slower then threads. 
+
+Q2:
+first, when we type "kill pid" with the keyboard we invoke an intterupt to the os.
+then, after we press "enter", the os sends a kill signal to the process,
+which terminates it. 
+
+Q3:
+'real' time is the actual time in the real world. 'virtual' time is time inside
+a process. For example, we can use 'real' time to present the uesr the actual
+time currently in Israel, and we can use 'virtual' time as in this excersice to
+set a time unit called quantum used for setting the amount of time each thread
+is running every cycle.
+
+Q4:
+a. None of the answers are common between the parent and child processes,
+because each child process creates a copy of the global variables of its
+parent.
+b. pipe is a way for processes to communicate with each other. processes
+can send and recieve data through the pipe. We can use the pipe to
+communicate between a parent and child processes or between sibling
+processes.
